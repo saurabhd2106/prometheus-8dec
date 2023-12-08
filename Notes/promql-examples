@@ -1,0 +1,33 @@
+Data Types: 
+    - Instant Vector - A set of time series containing a single sample for each time series, all sharing the same timestamp.
+    Example:
+        prometheus_http_requests_total
+
+    - Range Vector - A set of time series containing a range of data points over time for each time series.
+    Example:
+        prometheus_http_requests_total[5m]
+
+    - Scalars - A simple numeric floating point value.
+    Example:
+        0.5
+
+    - Strings - A simple string value.
+    Example:
+        "Hello World"
+
+Selectors and Matchers:
+    https://prometheus.io/docs/prometheus/latest/querying/basics/
+
+    - Label Selectors - Select time series by matching their labels against a set of equality and regular expression rules.
+
+    Example:
+        http_requests_total{job="prometheus",group="canary"}
+        http_requests_total{job="prometheus",group="production"}
+        http_requests_total{job="node",group="production"}
+        http_requests_total{job="node",group="canary"}
+
+    
+
+
+
+
